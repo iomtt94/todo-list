@@ -1,0 +1,25 @@
+.todo-list {
+    border-radius: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.damage {
+    box-shadow: 0 0 11px 1px rgba(242, 0, 0, 0.37);
+}
+
+.success {
+    box-shadow: 0 0 11px 1px rgba(8, 245, 114, 0.37)!important;
+}
+
+
+/* button delete */
+
+.delete-item:hover {
+    transition: all 0.6s ease;
+    opacity: 0.8;
+}
+
+.ng-valid {
+    box-shadow: none!important;
+}

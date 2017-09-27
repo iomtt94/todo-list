@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Start of the header */
+
+header {
+    padding: 10px 0px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1976D2;
+    font-size: 24px;
+    font-family: "Monaco" sans-serif;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+header h1 {
+    font-weight: 400;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* End of the header*/
