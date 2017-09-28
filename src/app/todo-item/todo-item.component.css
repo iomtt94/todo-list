@@ -1,76 +1,77 @@
 .todo-form,
 .todo-list {
-  border-radius: 2px;
-  width: 100%;
-  background-color: white;
+    border-radius: 2px;
+    width: 100%;
+    background-color: white;
 }
 
 .todo-item {
-  overflow: hidden;
-  transition: box-shadow 0.3s ease;
-  padding: 1.5rem;
-  font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #000;
-  display: flex;
-  text-align: left;
-  justify-content: space-between;
-  color: #1976D2;
-  width: 40%;
-  align-items: center;
-  margin: 0 auto;
-  margin-bottom: 20px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 1.5rem;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    color: #1976D2;
+    width: 40%;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .todo-accent {
-  /* box-shadow: 1px 1px 2px 1px #ffd740!important; */
-  border-top: 3px solid #1976D2;
-  border-left: 3px solid #1976D2!important;
-  border-bottom: 0.5px solid #1976D2!important;
-  border-right: 0.5px solid #1976D2!important;
+    border-top: 3px solid #1976D2;
+    border-left: 3px solid #1976D2!important;
+    border-bottom: 0.5px solid #1976D2!important;
+    border-right: 0.5px solid #1976D2!important;
 }
 
 .mat-fab.mat-accent {
-  background-color: #f44336;
-  color: #fff;
+    background-color: #f44336;
+    color: #fff;
 }
 
 
 /* text on the item */
 
 .todo-item span {
-  text-align: center;
-  padding: 0 5%;
+    text-align: center;
+    padding: 0 5%;
+    width: 71%;
+    word-wrap: break-word;
 }
 
 
 /* btn checkbox on item */
 
 .btn-item {
-  cursor: pointer;
-  zoom: 2;
+    cursor: pointer;
+    zoom: 2;
 }
 
 
 /* btn delete */
 
 .delete {
-  font-family: FANTASY;
-  border: none;
-  border-radius: 3px;
-  transition: box-shadow 0.3s ease;
-  color: #fff;
-  font-size: 30px;
-  border-radius: 50%;
-  background: #ED2553;
-  cursor: pointer;
-  padding: 7px 22px;
-  box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
-  outline: none;
+    font-family: FANTASY;
+    border: none;
+    border-radius: 3px;
+    transition: box-shadow 0.3s ease;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+    background: #ED2553;
+    cursor: pointer;
+    padding: 7px 22px;
+    box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
+    outline: none;
 }
 
 .delete:focus {
-  outline: none;
+    outline: none;
 }
 
 
@@ -80,13 +81,32 @@
 /* add this class when item is checked */
 
 .completed {
-  color: #fff;
-  text-decoration: line-through;
-  background-color: #1976D2;
+    color: #fff;
+    text-decoration: line-through;
+    background-color: #1976D2;
 }
 
 @media screen and (max-width: 992px) {
-  .todo-item {
-    width: 80%;
-  }
+    .todo-item {
+        width: 80%;
+    }
+    .mat-fab {
+        width: 36px;
+        height: 36px;
+    }
+    span.mat-button-wrapper {
+        padding: 0px!important;
+        MARGIN-TOP: -24PX;
+    }
+    .todo-item {
+        font-size: 14px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.mat-button:hover .mat-button-focus-overlay {
+    opacity: 0;
 }

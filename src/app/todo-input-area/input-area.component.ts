@@ -3,16 +3,14 @@ import { TodoService } from '../services/todo.service';
 import { ToDoItemModel } from '../models/todo-item-model';
 
 @Component({
-  selector: 'app-input-area',
-  templateUrl: './input-area.component.html',
-  styleUrls: ['./input-area.component.css']
+    selector: 'app-input-area',
+    templateUrl: './input-area.component.html',
+    styleUrls: ['./input-area.component.css']
 })
 export class InputAreaComponent implements OnInit {
-  @Input() userInput: string = '';
-  fieldNull: boolean;
-  todos: ToDoItemModel[];
-
-  constructor(private _todoService: TodoService) { }
+    @Input() userInput: string = '';
+    fieldNull: boolean;
+    constructor(private _todoService: TodoService) { }
 
   ngOnInit() {
   }

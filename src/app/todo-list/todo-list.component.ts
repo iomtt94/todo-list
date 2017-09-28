@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TodoService } from '../services/todo.service';
 import { ToDoItemModel } from '../models/todo-item-model';
 
@@ -10,15 +10,11 @@ import { ToDoItemModel } from '../models/todo-item-model';
 export class TodoListComponent implements OnInit {
   todos: ToDoItemModel[];
   fieldNull: boolean = true;
+  @Input() item: ToDoItemModel;
+  todosCountIncompleted: number = 0;
 
   constructor(private _todoService: TodoService) {}
-
   ngOnInit() {
     this.todos = this._todoService.todos;
   }
-
-  deleteSelected() {
-    this._todoService.deleteSelectedTodos();
-  }
-
 }

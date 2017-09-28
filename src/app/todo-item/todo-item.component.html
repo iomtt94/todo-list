@@ -1,13 +1,22 @@
-<div class="todo-item todo-accent" [class.completed]="item.isComplited">
-    <!-- <input type="checkbox" class="btn-item icon" (change)="item.toggleIsCompleted();"> -->
-    <md-checkbox class="md-pr" (change)="item.toggleIsCompleted()"></md-checkbox>
+<!-- Incompleted items -->
+<div class="todo-item todo-accent" [hidden]="item.isComplited" *ngIf="!item.isComplited">
+    <md-checkbox class="mat-checkbox mat-accent mat-checkbox-anim-unchecked-checked mat-checkbox-checked" (change)="item.toggleIsCompleted()" [(ngModel)]="checked"><label class="mat-checkbox-layout"><span class="mat-checkbox-label"><span style="display:none"></span></span></label></md-checkbox>
     <span>{{ item.title }}</span>
     <div class=" actions ">
-        <!-- <button class="delete " [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>-</button> -->
-        <button class="mat-fab mat-accent " color="warn " [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>
+        <button md-button class="mat-fab mat-accent" [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>
           <span class="mat-button-wrapper ">-</span>
-          <div class="mat-button-ripple mat-ripple mat-button-ripple-round " mat-ripple=" "></div>
-          <div class="mat-button-focus-overlay "></div>
         </button>
+    </div>
+</div>
+
+<!-- Completed items -->
+
+<div class="todo-item todo-accent completed" [hidden]="!item.isComplited" *ngIf="item.isComplited">
+    <md-checkbox class="md-pr" (change)="item.toggleIsCompleted()" [(ngModel)]="checked"></md-checkbox>
+    <span>{{ item.title }}</span>
+    <div class=" actions ">
+        <button md-button class="mat-fab mat-accent" [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>
+              <span class="mat-button-wrapper ">-</span>
+            </button>
     </div>
 </div>

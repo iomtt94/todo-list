@@ -21,11 +21,6 @@ export class TodoService {
     }
     console.log(this.todos);
   }
-
-  deleteSelectedTodos(): void {
-    for (let i = 0; i < this.todos.length; i++) {
-      if (this.todos[i].isComplited) this.todos.splice(i, 1);
-    }
-    console.log(this.todos);
-  }
 }
+
+

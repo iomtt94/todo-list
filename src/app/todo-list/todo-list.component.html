@@ -1,7 +1,7 @@
 <section class="todo-list">
     <app-input-area></app-input-area>
+    <p class="todos-header">ToDos Items:</p>
     <div *ngFor="let todo of todos">
         <app-todo-item [item]="todo"></app-todo-item>
     </div>
-    <button md-button md-raised-button class="mat-raised-button mat-warn" color="warn" (click)="deleteSelected()">Удалить выбранные элементы</button>
 </section>

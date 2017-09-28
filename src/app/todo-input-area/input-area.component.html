@@ -1,20 +1,16 @@
 <div class="push-area">
-  <div class="todo-item" [class.damage]="!fieldNull" (keyup.enter)='addTodo(userInput)'>
-    <!-- <input type="text" class="input-text" placeholder="Input some data..." required [(ngModel)]='userInput'> -->
+    <div class="todo-item" (keyup.enter)='addTodo(userInput)'>
+        <md-form-field class="todo-input">
+            <input mdInput #message maxlength="256" placeholder="Fill some text..." required [(ngModel)]='userInput'>
+            <md-hint align="start"><i>Don't disclose personal info</i> </md-hint>
+            <md-hint align="end">{{message.value.length}} / 256</md-hint>
+        </md-form-field>
 
-      <md-form-field class="todo-input">
-        <input mdInput #message maxlength="256" placeholder="Input some text..." required [(ngModel)]='userInput'>
-        <md-hint align="start"><i>Don't disclose personal info</i> </md-hint>
-        <md-hint align="end">{{message.value.length}} / 256</md-hint>
-      </md-form-field>
-
-
-    <div class="actions">
-      <button class="mat-fab mat-primary" color="primary" (click)="addTodo(userInput)">
+        <div class="actions">
+            <button class="mat-fab mat-primary" color="primary" (click)="addTodo(userInput)">
               <span class="mat-button-wrapper">+</span>
               <div class="mat-button-ripple mat-ripple mat-button-ripple-round" mat-ripple=""></div>
               <div class="mat-button-focus-overlay"></div></button>
+        </div>
     </div>
-  </div>
-  <p *ngIf="">Your tasks</p>
 </div>

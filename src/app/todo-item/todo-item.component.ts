@@ -9,7 +9,9 @@ import { TodoService } from '../services/todo.service';
 })
 export class TodoItemComponent implements OnInit {
 
+
   @Input() item: ToDoItemModel;
+  @Input() checked = false;
   constructor(private _todoService: TodoService) { }
 
   ngOnInit() {
