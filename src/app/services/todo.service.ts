@@ -11,8 +11,10 @@ export class TodoService {
 
   addTodo(userInput: string): void {
     let todo = new ToDoItemModel(userInput, false, Date.now());
-    this.todos.push(todo);
+    this.todos.unshift(todo);
     console.log(this.todos);
+    localStorage.setItem('todo', JSON.stringify(todo));
+
   }
 
   deleteTodo(todo: ToDoItemModel) {
@@ -22,5 +24,3 @@ export class TodoService {
     console.log(this.todos);
   }
 }
-
-

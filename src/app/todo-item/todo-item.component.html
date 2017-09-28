@@ -12,6 +12,7 @@
 <!-- Completed items -->
 
 <div class="todo-item todo-accent completed" [hidden]="!item.isComplited" *ngIf="item.isComplited">
+
     <md-checkbox class="md-pr" (change)="item.toggleIsCompleted()" [(ngModel)]="checked"></md-checkbox>
     <span>{{ item.title }}</span>
     <div class=" actions ">

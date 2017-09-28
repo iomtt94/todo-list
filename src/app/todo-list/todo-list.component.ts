@@ -16,5 +16,8 @@ export class TodoListComponent implements OnInit {
   constructor(private _todoService: TodoService) {}
   ngOnInit() {
     this.todos = this._todoService.todos;
+    let retrievedObject = localStorage.getItem('todo');
+    console.log('todo: ', JSON.parse(retrievedObject));
+    // this._todoService.addTodo()
   }
 }
