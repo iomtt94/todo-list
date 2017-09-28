@@ -28,7 +28,8 @@ import {MatCheckboxModule} from '@angular/material';
     MdCardModule,
     MdToolbarModule,
     MdIconModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatInputModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]

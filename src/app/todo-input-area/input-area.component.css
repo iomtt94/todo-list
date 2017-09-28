@@ -1,12 +1,12 @@
 .todo-form,
 .todo-list {
-    border-radius: 2px;
-    width: 100%;
-    background-color: white;
+  border-radius: 2px;
+  width: 100%;
+  background-color: white;
 }
 
 .todo-list {
-    /* text-align: center;
+  /* text-align: center;
     max-width: 600px;
     display: flex;
     margin-bottom: 20px;
@@ -19,149 +19,199 @@
 }
 
 .todo-item {
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    padding: 1.5rem;
-    font-size: 20px;
-    font-family: 'Josefin Sans', sans-serif;
-    color: #000;
-    box-shadow: 1px 1px 2px 0px;
-    display: flex;
-    text-align: left;
-    justify-content: space-between;
-    color: #1976D2;
-    margin-bottom: 20px;
-    width: 40%;
-    align-items: center;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  padding: 1.5rem;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000;
+  box-shadow: 1px 1px 2px 0px;
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  color: #1976D2;
+  margin-bottom: 20px;
+  width: 40%;
+  align-items: center;
 }
 
 .todo-item span {
-    text-align: center;
-    padding: 0 5%;
+  text-align: center;
+  padding: 0 5%;
 }
 
 .actions {
-    display: flex;
+  display: flex;
+  margin-left: 15px;
 }
 
 .todo-item input[type="text"] {
-    transition: 0.3s all ease;
-    width: 84%;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background: transparent;
-    transition: all 0.3s ease;
+  transition: 0.3s all ease;
+  width: 84%;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .todo-item input[type="text"]:focus {
-    width: 84%;
-    border-color: rgba(60, 179, 113, 0.35);
-    border-bottom: none;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  width: 84%;
+  border-color: rgba(60, 179, 113, 0.35);
+  border-bottom: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .btn-item {
-    box-shadow: 0px 0px 2px 0px #19d274;
-    zoom: 2;
+  box-shadow: 0px 0px 2px 0px #19d274;
+  zoom: 2;
 }
 
 input {
-    font-size: 16px;
-    color: #757575;
-    background-color: #fafafa;
-    padding: .25em;
-    border: 1px solid lightgray;
-    border-radius: 2px;
-    outline: none;
+  font-size: 16px;
+  color: #757575;
+  background-color: #fafafa;
+  padding: .25em;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  outline: none;
 }
 
 .delete {
-    font-family: FANTASY;
-    border: none;
-    border-radius: 3px;
-    transition: box-shadow 0.3s ease;
-    color: #fff;
-    font-size: 30px;
-    border-radius: 50%;
-    background: #ED2553;
-    cursor: pointer;
-    padding: 7px 22px;
-    box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
-    outline: none;
+  font-family: FANTASY;
+  border: none;
+  border-radius: 3px;
+  transition: box-shadow 0.3s ease;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  background: #ED2553;
+  cursor: pointer;
+  padding: 7px 22px;
+  box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
+  outline: none;
 }
 
 .delete:focus {
-    outline: none;
+  outline: none;
 }
 
 .completed {
-    color: gray;
-    text-decoration: line-through;
-    background-color: rgba(71, 77, 85, 0.24);
+  color: gray;
+  text-decoration: line-through;
+  background-color: rgba(71, 77, 85, 0.24);
 }
 
 .completed-btn {
-    background-color: #009688!important;
-    box-shadow: none;
-    color: #160C0C;
-    text-decoration: line-through;
-    font-weight: 400;
-    font-family: sans-serif;
+  background-color: #009688!important;
+  box-shadow: none;
+  color: #160C0C;
+  text-decoration: line-through;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 
 .btn-add {
-    border: none;
-    outline: none;
-    transition: box-shadow 0.3s ease;
-    color: #fff;
-    font-size: 30px;
-    border-radius: 50%;
-    background: #ED2553;
-    cursor: pointer;
-    padding: 8px 20px!important;
-    box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
+  border: none;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 50%;
+  background: #ED2553;
+  cursor: pointer;
+  padding: 8px 20px!important;
+  box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.19);
 }
 
 .btn-add:hover {
-    box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.29);
+  box-shadow: 0px 3px 20px 3px rgba(236, 9, 208, 0.29);
 }
 
 .push-area {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .damage {
-    box-shadow: 0 0 11px 1px rgba(242, 0, 0, 0.37);
+  box-shadow: 0 0 11px 1px rgba(242, 0, 0, 0.37);
 }
 
 .success {
-    box-shadow: 0 0 11px 1px rgba(8, 245, 114, 0.37)!important;
+  box-shadow: 0 0 11px 1px rgba(8, 245, 114, 0.37)!important;
 }
 
 .delete-item {
-    width: 20%;
-    margin: 0 auto;
-    padding: 0.8rem;
-    border: none;
-    background: #1976d2;
-    color: #fff;
-    border-radius: 6px;
-    font-family: tahoma;
-    transform: all 0.6s ease;
+  width: 20%;
+  margin: 0 auto;
+  padding: 0.8rem;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  border-radius: 6px;
+  font-family: tahoma;
+  transform: all 0.6s ease;
 }
 
 .delete-item:hover {
-    transition: all 0.6s ease;
-    opacity: 0.8;
+  transition: all 0.6s ease;
+  opacity: 0.8;
 }
 
 .ng-valid {
-    box-shadow: none!important;
+  box-shadow: none!important;
 }
 
 .disabled {
-    background: #000;
+  background: #000;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+#message {
+  border: none;
+}
+
+input {
+  border: none;
+  background: transparent;
+}
+
+.todo-input {
+  width: 85%;
+}
+
+.todo-input md-hint {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 992px) {
+  .todo-item {
+    width: 80%;
+  }
+  .todo-input {
+    font-size: 14px;
+  }
+  .mat-hint {
+    font-size: 10px!important;
+  }
+  input {
+      padding: 0px!important;
+  }
+
+  .mat-fab {
+      width: 36px;
+      height: 36px;
+  }
+
+
 }

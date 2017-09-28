@@ -23,8 +23,8 @@
     margin-bottom: 20px;
 }
 
-.todo-orange {
-    box-shadow: 1px 1px 2px 0px #f44336!important;
+.todo-accent {
+    box-shadow: 1px 1px 2px 1px #ffd740!important;
 }
 
 
@@ -75,4 +75,11 @@
     color: gray;
     text-decoration: line-through;
     background-color: rgba(71, 77, 85, 0.24);
+}
+
+
+@media screen and (max-width: 992px) {
+    .todo-item {
+        width: 80%;
+    }
 }
