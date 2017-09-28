@@ -194,6 +194,12 @@ input {
   font-size: 12px;
 }
 
+.mat-fab.mat-primary {
+    background-color: #1976D2;
+
+}
+
+
 @media screen and (max-width: 992px) {
   .todo-item {
     width: 80%;
@@ -212,6 +218,4 @@ input {
       width: 36px;
       height: 36px;
   }
-
-
 }
