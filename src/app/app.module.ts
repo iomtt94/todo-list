@@ -18,9 +18,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-    { path: '', component: AppComponent },
-    { path: 'lul', component: TodoItemComponent },
-    { path: 'lil', redirectTo: 'AppComponent' }
+    { path: '', component: TodoListComponent },
+    { path: 'todoList', component: TodoListComponent },
+    { path: 'weather', component: WeatherItemComponent }
 ];
 
 @NgModule({

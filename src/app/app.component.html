@@ -4,10 +4,10 @@
         <h1>{{ title }}</h1>
     </div>
     <div class="footer-social-links">
-            <a href="#" title="Homepage" class='active-link'><i class="fa fa-home"></i></a>
-            <a href="#" title="Weather"><i class="fa fa-cloud"></i></a>
+            <a routerLink='/todoList' title="Homepage" class='active-link'><i class="fa fa-home"></i></a>
+            <a routerLink='/weather' title="Weather"><i class="fa fa-cloud"></i></a>
           </div>
 </header>
 <main>
-    <app-todo-list></app-todo-list>
+    <router-outlet></router-outlet>
 </main>
