@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Start of the header */
+
+header {
+    padding-bottom: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-family: 'Josefin Sans', sans-serif;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.24);
+    text-align: center;
+  background: #ff5722; /* fallback for old browsers */
+
+}
+
+header h1 {
+    font-weight: 400;
+}
+
+header img {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+main {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.logo {
+    display: inline-block;
+}
+
+header a {
+    color: #FFF;
+}
+
+/* End of the header*/
+
+/* navigation icons */
+
+.footer-social-links{
+  font-size: 24px;
+  text-align: center;
+  margin-top: 1%;
+}
+
+.active-link {
+    border-top: 1px solid #1976D2;
+}
+.footer-social-links a{
+    padding-top: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px !important;
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+
+.footer-social-links a:hover {
+    transform: translateY(-5px);
+}
+
+/* end of navigation icons */
