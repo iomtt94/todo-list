@@ -18,6 +18,7 @@ import { WeatherModule } from './weather-module/weather.module';
 import { WeatherComponent } from './weather-module/weather-app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoItemComponent } from './todo-module/todo-item/todo-item.component';
+import { DarkSkySearchService } from './weather-module/services/darksky.service';
 
 
 

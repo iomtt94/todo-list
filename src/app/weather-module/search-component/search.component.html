@@ -1,4 +1,7 @@
 <form>
-	<input type="search" placeholder="Search">
+    <input type="search" placeholder="Search" (input)="term$.next($event.target.value)">
+    <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+    </ul>
 </form>
 
