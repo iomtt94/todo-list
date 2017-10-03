@@ -13,14 +13,15 @@ import { InputAreaComponent } from './todo-input-area/input-area.component';
 import { MatButtonModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material';
 import { MdCheckboxModule } from '@angular/material';
-import { WeatherItemComponent } from './weather-app/weather-item/weather-item/weather-item.component';
 import { Routes, RouterModule } from '@angular/router';
+import { WeaterAppComponent } from './weather-app/weater-app.component';
+import { SearchComponent } from './weather-app/search-component/search.component';
 
 
 const routes: Routes = [
     { path: '', component: TodoListComponent },
     { path: 'todoList', component: TodoListComponent },
-    { path: 'weather', component: WeatherItemComponent }
+    { path: 'weather', component: WeaterAppComponent }
 ];
 
 @NgModule({
@@ -29,7 +30,9 @@ const routes: Routes = [
     TodoItemComponent,
     TodoListComponent,
     InputAreaComponent,
-    WeatherItemComponent
+    WeaterAppComponent,
+    WeaterAppComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
