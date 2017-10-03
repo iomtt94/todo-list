@@ -1,0 +1,96 @@
+.todo-form,
+.todo-list {
+    border-radius: 2px;
+    width: 100%;
+    background-color: white;
+}
+
+.todo-item {
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    padding: 1.5rem;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000;
+    box-shadow: 1px 1px 2px 0px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    color: #1976D2;
+    margin-bottom: 20px;
+    width: 40%;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    margin-left: 15px;
+}
+
+.todo-item input[type="text"] {
+    transition: 0.3s all ease;
+    width: 84%;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.todo-item input[type="text"]:focus {
+    width: 84%;
+    border-color: rgba(60, 179, 113, 0.35);
+    border-bottom: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+input {
+    font-size: 16px;
+    color: #757575;
+    background-color: #fafafa;
+    padding: .25em;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    outline: none;
+}
+
+.push-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    border: none;
+    background: transparent;
+}
+
+.todo-input {
+    width: 85%;
+}
+
+.todo-input md-hint {
+    font-size: 12px;
+}
+
+.mat-fab.mat-primary {
+    background-color: #1976D2;
+}
+
+@media screen and (max-width: 992px) {
+    .todo-item {
+        width: 80%;
+    }
+    .todo-input {
+        font-size: 14px;
+    }
+    .mat-hint {
+        font-size: 10px!important;
+    }
+    input {
+        padding: 0px!important;
+    }
+    .mat-fab {
+        width: 36px;
+        height: 36px;
+    }
+}

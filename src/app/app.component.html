@@ -1,0 +1,14 @@
+<!-- <app-todo></app-todo> -->
+<header>
+    <div class="logo">
+        <img src="../favicon.ico" alt="">
+        <h1>{{ title }}</h1>
+    </div>
+    <div class="footer-social-links">
+            <a routerLink='/todoList' title="Homepage" routerLinkActive="active-link"><i class="fa fa-home"></i></a>
+            <a routerLink='/weather' title="Weather" routerLinkActive="active-link"><i class="fa fa-cloud"></i></a>
+    </div>
+</header>
+<main>
+    <router-outlet></router-outlet>
+</main>

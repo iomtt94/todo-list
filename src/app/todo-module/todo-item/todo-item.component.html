@@ -1,0 +1,23 @@
+<!-- Incompleted items -->
+<div class="todo-item todo-accent" [hidden]="item.isComplited" *ngIf="!item.isComplited">
+    <md-checkbox class="mat-checkbox mat-accent mat-checkbox-anim-unchecked-checked mat-checkbox-checked" (change)="item.toggleIsCompleted()" [(ngModel)]="checked"><label class="mat-checkbox-layout"><span class="mat-checkbox-label"><span style="display:none"></span></span></label></md-checkbox>
+    <span>{{ item.title }}</span>
+    <div class=" actions ">
+        <button md-button class="mat-fab mat-accent hide" [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>
+          <span class="mat-button-wrapper ">-</span>
+        </button>
+    </div>
+</div>
+
+<!-- Completed items -->
+
+<div class="todo-item todo-accent completed" [hidden]="!item.isComplited" *ngIf="item.isComplited">
+
+    <md-checkbox class="md-pr" (change)="item.toggleIsCompleted()" [(ngModel)]="checked"></md-checkbox>
+    <span>{{ item.title }}</span>
+    <div class=" actions ">
+        <button md-button class="mat-fab mat-accent" [ngClass]="{ 'completed-btn' : item.completed} " (click)='deleteTodoItem()'>
+              <span class="mat-button-wrapper ">-</span>
+            </button>
+    </div>
+</div>
