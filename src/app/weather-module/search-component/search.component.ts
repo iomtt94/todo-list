@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkSkySearchService } from '../services/darksky.service';
+
 
 @Component({
   selector: 'app-search',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  public userSearch: string;
+
+  constructor(private _darkSry: DarkSkySearchService) { }
 
   ngOnInit() {
+  }
+
+  searchCity() {
+      if (this.userSearch.length < 2) return;
+      this._darkSry.searchCity(this.userSearch);
   }
 
 }

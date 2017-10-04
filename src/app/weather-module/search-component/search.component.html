@@ -1,7 +1,13 @@
 <form>
-    <input type="search" placeholder="Search" (input)="term$.next($event.target.value)">
-    <ul>
-        <li *ngFor="let item of items">{{item}}</li>
-    </ul>
+    <form class="example-form">
+        <md-form-field class="example-full-width">
+          <input type="text" placeholder="Enter the city..." aria-label="Number" mdInput [mdAutocomplete]="auto" [(ngModel)]="userSearch" name="userSearch"  (input)="searchCity()">
+          <md-autocomplete #auto="mdAutocomplete">
+            <md-option *ngFor="let option of userSearch" [value]="option">
+              {{ option }}
+            </md-option>
+          </md-autocomplete>
+        </md-form-field>
+      </form>
 </form>
 

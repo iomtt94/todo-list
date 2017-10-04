@@ -1,16 +1,22 @@
 import { Injectable } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Injectable()
 export class DarkSkySearchService {
 
-    // search(term: string) {
-    //     const search = new URLSearchParams();
-    //     search.set('action', 'opensearch');
-    //     search.set('search', term);
-    //     search.set('format', 'json');
+    constructor(private _http: HttpClient) {
+    }
 
-    //     return this._jsonp.get('http://en.wikipedia.org/w/api.php?callback?=JSONP_CALLBACK', { search })
-    //     .map(response => response.json()[1]);
-    // }
+
+    getWeather(lat, long) {
+        this._http.get(`https://api.darksky.net/forecast/e1a8d753a1c87a4b7214a3456f3f09b5/${lat},${long}`).subscribe(data => {
+            console.log(data);
+        });
+    }
+
+    searchCity(userInput) {
+        this._http.get(`http://autocomplete.wunderground.com/aq?query=${userInput}`).subscribe(data => {
+            console.log(data);
+        });
+    }
 }

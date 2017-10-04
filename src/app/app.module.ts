@@ -19,6 +19,7 @@ import { WeatherComponent } from './weather-module/weather-app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { TodoItemComponent } from './todo-module/todo-item/todo-item.component';
 import { DarkSkySearchService } from './weather-module/services/darksky.service';
+import 'hammerjs';
 
 
 
@@ -39,15 +40,19 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdButtonModule,
     MatCheckboxModule,
     MatInputModule,
     MatButtonModule,
     MdCheckboxModule,
     TodoModule,
     WeatherModule,
+    BrowserModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MdButtonModule,
     RouterModule.forChild(routes)
   ],
+  exports: [MdButtonModule, MdCheckboxModule],
   providers: [TodoService],
   bootstrap: [AppComponent]
 })

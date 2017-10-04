@@ -1,8 +1,9 @@
 import { Router } from '@angular/router';
 import { SearchComponent } from './search-component/search.component';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DarkSkySearchService } from './services/darksky.service';
 import { Http } from '@angular/http';
+
 
 @Component({
   selector: 'app-weather-app',
@@ -10,19 +11,15 @@ import { Http } from '@angular/http';
   styleUrls: ['./weather-app.component.css'],
 })
 
-export class WeatherComponent  {
+export class WeatherComponent implements OnInit {
 
-    public weather: Weather;
+    constructor(private getData: DarkSkySearchService) {
 
-  constructor(private router: Router, http: Http) {
-    http.get('/api/weather/city/London').subscribe(result => {
-        this.weather = result.json();
-  });
-}
+    }
+
+
+    ngOnInit() {
+    }
+
 }
 
-interface Weather {
-    temp: string;
-    summary: string;
-    city: string;
-}
