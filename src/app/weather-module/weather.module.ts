@@ -1,3 +1,4 @@
+import { Http } from '@angular/http';
 import { DarkSkySearchService } from './services/darksky.service';
 import { SearchComponent } from './search-component/search.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeaterListComponent } from './weather-list/weater-list.component';
 import { WeatherItemComponent } from './weather-item/weather-item.component';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
+import {HttpModule} from '@angular/http';
 
 
 const routes: Routes = [
@@ -22,20 +24,20 @@ const routes: Routes = [
     WeatherComponent,
     SearchComponent,
     WeaterListComponent,
-    WeatherItemComponent
+    WeatherItemComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    HttpModule,
     HttpClientModule,
     MatAutocompleteModule,
     MatInputModule,
     MdButtonModule
   ],
-//   providers: [TodoService],
   exports: [WeatherComponent],
-  providers: [DarkSkySearchService]
+  providers: [DarkSkySearchService, Http]
 })
 export class WeatherModule {
  }

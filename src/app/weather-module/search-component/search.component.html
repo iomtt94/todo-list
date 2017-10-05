@@ -1,13 +1,13 @@
 <form>
-    <form class="example-form">
-        <md-form-field class="example-full-width">
-          <input type="text" placeholder="Enter the city..." aria-label="Number" mdInput [mdAutocomplete]="auto" [(ngModel)]="userSearch" name="userSearch"  (input)="searchCity()">
-          <md-autocomplete #auto="mdAutocomplete">
-            <md-option *ngFor="let option of userSearch" [value]="option">
-              {{ option }}
+    <md-form-field>
+        <input type="text" placeholder="Enter the city..." aria-label="Number" mdInput [mdAutocomplete]="auto" [(ngModel)]="userSearch"
+            name="userSearch" (input)="searchCity()" (change)="validation()">
+        <md-autocomplete #auto="mdAutocomplete">
+                <div *ngIf="isValidSearch">
+            <md-option (click)="showIt(option)" *ngFor="let option of seachedLocations" [value]="option.name">
+                        {{ option.name }}
             </md-option>
-          </md-autocomplete>
-        </md-form-field>
-      </form>
+        </div>
+        </md-autocomplete>
+    </md-form-field>
 </form>
-

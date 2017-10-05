@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
+import { Http, HttpModule } from '@angular/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DarkSkySearchService {
@@ -15,8 +17,8 @@ export class DarkSkySearchService {
     }
 
     searchCity(userInput) {
-        this._http.get(`http://autocomplete.wunderground.com/aq?query=${userInput}`).subscribe(data => {
-            console.log(data);
+       return this._http.get(`http://autocomplete.wunderground.com/aq?query=${userInput}`).map(data => {
+            return data;
         });
     }
 }

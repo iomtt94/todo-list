@@ -9,8 +9,20 @@ article {
     text-align: left;
     color: #1976D2;
     margin-bottom: 20px;
-    width: 40%;
     width: 50%;
     margin: 0 auto;
     margin-top: 5%;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    article {
+        width: 80%;
+        font-size: 14px;
+    }
 }

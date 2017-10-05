@@ -16,7 +16,7 @@ export class AppComponent {
     // constructor(private router: Router) {}
 
     public href: string = '';
-    title = 'Angular 2';
+    title = 'Angular 4';
 
     // ngOnInit() {
     //     this.href = this.router.url;

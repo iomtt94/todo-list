@@ -20,21 +20,21 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { TodoItemComponent } from './todo-module/todo-item/todo-item.component';
 import { DarkSkySearchService } from './weather-module/services/darksky.service';
 import 'hammerjs';
-
-
+import { AboutAuthorComponent } from './about-author/about-author.component';
 
 const routes: Routes = [
     { path: '', redirectTo: '/todoList', pathMatch: 'full' },
     { path: 'todoList', component: WeatherModule },
-    { path: '**', component: PageNotFoundComponent, pathMatch: 'full' }
-    // { path: 'weather', component: WeaterAppComponent }
+    { path: 'author', component: AboutAuthorComponent },
+    { path: '**', component: PageNotFoundComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutAuthorComponent
   ],
   imports: [
     BrowserModule,
