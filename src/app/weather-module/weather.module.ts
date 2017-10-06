@@ -9,10 +9,10 @@ import { MatCheckboxModule } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
 import { WeatherComponent } from './weather-app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { WeaterListComponent } from './weather-list/weater-list.component';
 import { WeatherItemComponent } from './weather-item/weather-item.component';
 import { MatAutocompleteModule, MatInputModule } from '@angular/material';
-import {HttpModule} from '@angular/http';
+import { HttpModule } from '@angular/http';
+import { TempConverterPipe } from './weather-item/to-celsius.pipe';
 
 
 const routes: Routes = [
@@ -23,8 +23,8 @@ const routes: Routes = [
   declarations: [
     WeatherComponent,
     SearchComponent,
-    WeaterListComponent,
     WeatherItemComponent,
+    TempConverterPipe
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,8 @@
 <article>
-        <p>Cityname:</p>
-        <p>Clouds:</p>
-        <p>Temperature:</p>
-        <p>Wind speed:</p>
-        <p>Visibility:</p>
-        <p>Summary:</p>
+        <p>Cityname: {{ cityName }}</p>
+        <p>Clouds: {{ cloudCover | percent:'1.1-8' }}</p>
+        <p>Temperature: {{ temparature | tempConverter:'C' }}{{ '℃' }}</p>
+        <p>Wind speed: {{ windSpeed }} {{ 'km/h' }}</p>
+        <p>Visibility: {{ visibility }} {{ 'km' }}</p>
+        <p>Summary: {{ summary }}</p>
 </article>

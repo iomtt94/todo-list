@@ -14,12 +14,21 @@ export class SearchComponent implements OnInit {
     public isValidSearch: boolean = false;
     constructor(private _darkSky: DarkSkySearchService) {}
 
-    item: any;
+    itemWeather: any;
+    lattitude: number;
+    longtitude: number;
+    public cityName: string = '';
 
-    ngOnInit() {}
+    returnWeater() {
+        return this.itemWeather;
+    }
+
+
+    ngOnInit() {
+
+    }
 
     searchCity() {
-
         if (this.userSearch.length < 2) {
             this.isValidSearch = false;
             return;
@@ -34,7 +43,16 @@ export class SearchComponent implements OnInit {
 
     showIt(item) {
         console.log(item);
+        this.itemWeather = item;
+        this.lattitude = this.itemWeather['lat'];
+        this.longtitude = this.itemWeather['lon'];
+        this.cityName = this.itemWeather['name'];
+        console.log(this.lattitude);
+        console.log(this.longtitude);
+    }
 
+    showThat() {
+        this._darkSky.getWeather(this.lattitude, this.longtitude, this.cityName);
     }
 
     validation() {

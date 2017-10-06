@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkSkySearchService } from '../services/darksky.service';
 
 @Component({
   selector: 'app-weather-item',
@@ -7,9 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeatherItemComponent implements OnInit {
 
-  constructor() { }
+    public weatherItem: any;
+    public cityName: string = '';
+    public data: any;
+    public summary: string[];
+    public visibility: number[];
+    public windSpeed: number[];
+    public temparature: number[];
+    public cloudCover: number[];
+
+  constructor(private _darkSky: DarkSkySearchService) {
+
+   }
 
   ngOnInit() {
-  }
+    this._darkSky.weatherSummary.subscribe(data => {
+        this.cityName = this._darkSky.cityName;
+        this.weatherItem = data;
+        console.log(data);
+        console.log(this._darkSky.cityName);
+        this.data = data;
+        this.summary = data['currently']['summary'];
+        this.visibility = data['currently']['visibility'];
+        this.windSpeed = data['currently']['windSpeed'];
+        this.temparature = data['currently']['temperature'];
+        this.cloudCover = data['currently']['cloudCover'];
 
+    });
+  }
 }

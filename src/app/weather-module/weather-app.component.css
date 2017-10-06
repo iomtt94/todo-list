@@ -1,7 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt');
+
 h1 {
-    margin-bottom: 30px;
     font-family: 'Josefin Sans', sans-serif;
     color: #E91E63;
+    position: relative;
+    display: inline;
+    background: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1::before {
+    width: 140%;
+    height: 2px;
+    content: '';
+    display: block;
+    background: #009688;
+    margin: 0 auto;
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+    left: -20%;
+    right: 0;
+}
+
+
+
+.choosed {
+    color: #00bcd4;
+    border-bottom: 2px solid #E91E63;
+}
+
+.choosed::first-letter {
+    font-size: 50px;
 }
 
 /*  */
