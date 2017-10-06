@@ -7,7 +7,8 @@ import { DarkSkySearchService } from '../services/darksky.service';
   styleUrls: ['./weather-item.component.css']
 })
 export class WeatherItemComponent implements OnInit {
-
+    public dateDescription: string = 'The weather is for';
+    public date = new Date();
     public weatherItem: any;
     public cityName: string = '';
     public data: any;
@@ -16,6 +17,7 @@ export class WeatherItemComponent implements OnInit {
     public windSpeed: number[];
     public temparature: number[];
     public cloudCover: number[];
+    location = {};
 
   constructor(private _darkSky: DarkSkySearchService) {
 
@@ -33,7 +35,12 @@ export class WeatherItemComponent implements OnInit {
         this.windSpeed = data['currently']['windSpeed'];
         this.temparature = data['currently']['temperature'];
         this.cloudCover = data['currently']['cloudCover'];
-
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(position => {
+              this.location = position.coords;
+              console.log(position.coords);
+            });
+         }
     });
   }
 }

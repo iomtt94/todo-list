@@ -1,4 +1,5 @@
-<article>
+<article *ngIf="data" >
+        <h2>{{ dateDescription }} {{ date | date:'fullDate'}}</h2>
         <p>Cityname: {{ cityName }}</p>
         <p>Clouds: {{ cloudCover | percent:'1.1-8' }}</p>
         <p>Temperature: {{ temparature | tempConverter:'C' }}{{ '℃' }}</p>
