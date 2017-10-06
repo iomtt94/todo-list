@@ -12,10 +12,6 @@ export class DarkSkySearchService {
     public weatherSummary = new Subject();
     public cityName: string = '';
 
-    public weatherType: string[] = ['clear-day', 'clear-night',
-    'rain', 'snow', 'sleet', 'wind', 'fog', 'cloudy', 'partly-cloudy-day',
-    'partly-cloudy-night', 'hail', 'thunderstorm', 'tornado'];
-
 
     constructor(private _http: HttpClient) { }
 

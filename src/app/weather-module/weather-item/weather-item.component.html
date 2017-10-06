@@ -6,4 +6,7 @@
         <p>Wind speed: {{ windSpeed }} {{ 'km/h' }}</p>
         <p>Visibility: {{ visibility }} {{ 'km' }}</p>
         <p>Summary: {{ summary }}</p>
+        <div [ngSwitch]="iconType">
+            <img *ngSwitchCase="'partly-cloudy-day'" [src]="'http://www.news1130.com/wp-content/themes/samuel/images/weather-colour/weather_fragment_icon_11.png'">
+        </div>
 </article>
