@@ -6,7 +6,19 @@
         <p>Wind speed: {{ windSpeed }} {{ 'km/h' }}</p>
         <p>Visibility: {{ visibility }} {{ 'km' }}</p>
         <p>Summary: {{ summary }}</p>
-        <div [ngSwitch]="iconType">
-            <img *ngSwitchCase="'partly-cloudy-day'" [src]="'http://www.news1130.com/wp-content/themes/samuel/images/weather-colour/weather_fragment_icon_11.png'">
-        </div>
+        <div [ngSwitch]="iconType" class="icon-weather">
+            <img *ngSwitchCase="'clear-day'" [src]="'../../../assets/weather/day-clear.png'">
+            <img *ngSwitchCase="'clear-night'" [src]="'../../../assets/weather/clear-night.png'">
+            <img *ngSwitchCase="'rain'" [src]="'../../../assets/weather/rain.png'">
+            <img *ngSwitchCase="'snow'" [src]="'../../../assets/weather/snow.png'">
+            <img *ngSwitchCase="'sleet'" [src]="'../../../assets/weather/sleet.png'">
+            <img *ngSwitchCase="'wind'" [src]="'../../../assets/weather/wind.png'">
+            <img *ngSwitchCase="'fog'" [src]="'../../../assets/weather/fog.png'">
+            <img *ngSwitchCase="'cloudy'" [src]="'../../../assets/weather/cloudy.png'">
+            <img *ngSwitchCase="'partly-cloudy-day'" [src]="'../../../assets/weather/day_partly_cloudy.png'">
+            <img *ngSwitchCase="'partly-cloudy-night'" [src]="'../../../assets/weather/night_partly_cloudy.png'">
+            <img *ngSwitchCase="'hail'" [src]="'../../../assets/weather/hail.png'">
+            <img *ngSwitchCase="'thunderstorm'" [src]="'../../../assets/weather/thunderstorm.png'">
+            <img *ngSwitchCase="'tornado'" [src]="'../../../assets/weather/tornado.png'">
+            </div>
 </article>

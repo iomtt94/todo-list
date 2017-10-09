@@ -15,7 +15,7 @@
     text-align: left;
     justify-content: space-between;
     color: #1976D2;
-    width: 40%;
+    width: 65%;
     align-items: center;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -55,7 +55,7 @@
 
 @media screen and (max-width: 992px) {
     .todo-item {
-        width: 80%;
+        width: 91%;
     }
     .mat-fab {
         width: 36px;

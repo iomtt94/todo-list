@@ -7,7 +7,7 @@
 .todos-header {
     background: #00897b;
     color: #fff;
-    width: 40%;
+    width: 65%;
     margin: 0 auto;
     padding: 1.6rem;
     margin-bottom: 1.5rem;
@@ -16,6 +16,6 @@
 
 @media screen and (max-width: 992px) {
     .todos-header {
-        width: 80%;
+        width: 91%;
     }
 }

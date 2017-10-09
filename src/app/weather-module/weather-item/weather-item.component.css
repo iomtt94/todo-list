@@ -25,10 +25,15 @@ h2 {
     color: #E91E63;
 }
 
-
 @media screen and (max-width: 768px) {
     article {
-        width: 80%;
+        width: 100%;
         font-size: 14px;
     }
+}
+
+.icon-weather {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

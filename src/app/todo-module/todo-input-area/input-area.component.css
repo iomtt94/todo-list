@@ -18,7 +18,7 @@
     justify-content: space-between;
     color: #1976D2;
     margin-bottom: 20px;
-    width: 40%;
+    width: 65%;
     align-items: center;
 }
 
@@ -65,7 +65,7 @@ input {
 }
 
 .todo-input {
-    width: 85%;
+    width: 91%;
 }
 
 .todo-input md-hint {
@@ -76,9 +76,30 @@ input {
     background-color: #1976D2;
 }
 
+.mat-fab.mat-primary {
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+    min-width: 0;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    flex-shrink: 0;
+    outline: none;
+    border: none;
+}
+
+
+.mat-fab .mat-button-wrapper {
+    padding: 0px;
+    display: initial;
+    line-height: normal;
+}
+
+
+
 @media screen and (max-width: 992px) {
     .todo-item {
-        width: 80%;
+        width: 91%;
     }
     .todo-input {
         font-size: 14px;
@@ -93,4 +114,9 @@ input {
         width: 36px;
         height: 36px;
     }
+    .mat-fab.mat-primary {
+        width: 36px;
+        height: 36px;
+    }
+
 }
