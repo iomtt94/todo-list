@@ -1,8 +1,5 @@
-import { Router } from '@angular/router';
-import { SearchComponent } from './search-component/search.component';
 import { Component, OnInit } from '@angular/core';
 import { DarkSkySearchService } from './services/darksky.service';
-import { Http } from '@angular/http';
 
 
 @Component({
@@ -13,12 +10,9 @@ import { Http } from '@angular/http';
 
 export class WeatherComponent implements OnInit {
 
-    constructor(private getData: DarkSkySearchService) {
-
-    }
+    constructor(private getData: DarkSkySearchService) {}
 
     ngOnInit() {
     }
-
 }
 

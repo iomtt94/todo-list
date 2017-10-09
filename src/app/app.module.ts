@@ -1,6 +1,4 @@
-import { SearchComponent } from './weather-module/search-component/search.component';
 import { TodoComponent } from './todo-module/todo.component';
-import { TodoListComponent } from './todo-module/todo-list/todo-list.component';
 import { TodoService } from './todo-module/services/todo.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -15,12 +13,9 @@ import { MdCheckboxModule } from '@angular/material';
 import { Routes, RouterModule } from '@angular/router';
 import { TodoModule } from './todo-module/todo.module';
 import { WeatherModule } from './weather-module/weather.module';
-import { WeatherComponent } from './weather-module/weather-app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { TodoItemComponent } from './todo-module/todo-item/todo-item.component';
-import { DarkSkySearchService } from './weather-module/services/darksky.service';
-import 'hammerjs';
 import { AboutAuthorComponent } from './about-author/about-author.component';
+import 'hammerjs';
 
 const routes: Routes = [
     { path: '', redirectTo: '/todoList', pathMatch: 'full' },

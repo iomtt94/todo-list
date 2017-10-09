@@ -1,5 +1,4 @@
 import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoComponent } from './todo.component';
 import { TodoService } from './services/todo.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';

@@ -1,8 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { TodoService } from '../services/todo.service';
 import { ToDoItemModel } from '../models/todo-item-model';
-import { ToDoItemCompletedModel } from '../models/todo-item-completed-model';
-import { TodoModule } from '../todo.module';
 
 @Component({
     selector: 'app-todo-list',

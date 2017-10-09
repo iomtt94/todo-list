@@ -1,4 +1,4 @@
-import {Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DarkSkySearchService } from '../services/darksky.service';
 
 
@@ -9,11 +9,11 @@ import { DarkSkySearchService } from '../services/darksky.service';
 })
 export class SearchComponent implements OnInit {
 
+    constructor(private _darkSky: DarkSkySearchService) {}
+
     public userSearch: string = '';
     public seachedLocations: any[];
     public isValidSearch: boolean = false;
-    constructor(private _darkSky: DarkSkySearchService) {}
-
     itemWeather: any;
     lattitude: number;
     longtitude: number;
@@ -23,10 +23,7 @@ export class SearchComponent implements OnInit {
         return this.itemWeather;
     }
 
-
-    ngOnInit() {
-
-    }
+    ngOnInit() {}
 
     searchCity() {
         if (this.userSearch.length < 2) {
@@ -59,5 +56,4 @@ export class SearchComponent implements OnInit {
         if (this.userSearch.trim() !== '') return;
         this.seachedLocations = [];
     }
-
 }
